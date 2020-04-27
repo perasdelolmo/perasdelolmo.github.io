@@ -1,0 +1,219 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/aos/src/sass/aos";
+@import "node_modules/slick-carousel/slick/slick.scss";
+
+//Variables
+$black : #080808;
+$primary: #E3704A;
+
+$font-main: "Alegreya", sans-serif;
+$font-title: "Passion One", serif;
+
+//General
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-main;
+    color: $black;
+    overflow-x: hidden;
+    font-weight: 400;
+    background: #fdfdfd;
+}
+
+h1,
+a{
+	font-family: $font-title;
+}
+
+a{
+	color: $black;
+}
+
+a:hover{
+	text-decoration: none;
+	color: $black;
+}
+
+p:last-of-type{
+	margin-bottom: 0;
+}
+
+a.btn{
+	background: $black;	
+	padding: 0px 20px;
+	height: 42px;
+	line-height: 42px;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 0.1em;
+	border-radius: 0;
+	transition: 0.9s cubic-bezier(0.17, 0.84, 0.44, 1);
+
+	&:hover{
+		color: #fff;
+		letter-spacing: .125em;
+		background: $primary;
+	}
+}
+
+h1{
+	font-size: 5rem;
+	line-height: .84;
+	letter-spacing: 0.06em;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.intro{
+	vertical-align: middle;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 1.25rem;	
+	margin-bottom: 1rem;
+}
+
+.presenta{
+	width: 150px;
+	display: inline-block;
+	margin-right: .5rem;
+}
+
+.col-md-7{
+	padding: 6rem 0;
+}
+
+.landing-intro{
+	overflow-x: hidden;
+}
+
+.landing-intro,
+.landing-intro>.container,
+.landing-intro>.container>.row{
+	min-height: 100vh;
+}
+
+.book-meta{
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-top: 1rem;
+
+	.name{
+		font-style: italic;
+		font-weight: 800;
+	}
+}
+
+.book-desc{
+	padding-left: 1.5rem;
+	margin-top: 1.5rem;
+	border-left: 6px solid $primary;
+	font-weight: 500;
+	line-height: 1.5;
+	font-size: 1.05rem;
+}
+
+.book-download{
+	margin-top: 2rem;
+
+	a.btn{
+		margin-bottom: .875rem;
+		width: 100%;
+	}
+}
+
+.book-cover{
+	position: relative;
+
+	img{
+		position: relative;
+		z-index: 20;
+	}
+
+	&:before{
+		position: absolute;
+		left: 50%;
+		right: -1000px;
+		top: 0;
+		bottom: 0;
+		content: "";
+		background: $primary;
+		box-shadow: -1px 0 0px 0px rgba(8, 8, 8, 0.25);
+	}
+}
+
+.col-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+@media screen and (max-width: 768px){
+	.book-cover img{
+		margin: 2rem auto;
+	}
+
+	body{
+		padding-bottom: 4rem;
+	}
+
+	.book-cover:before{
+		display: none;
+	}
+
+	.intro-mobile{
+		background: $primary;
+		color: #f4f4f4;
+		padding: 2rem;
+		margin-bottom: 3rem;
+		text-shadow: 1px 1px 1px rgba($black, .2);
+
+	    a.btn{
+	    	margin-top: 1.5rem;
+	    }
+	}
+
+	.book-cover-mobile{
+		height: auto;
+	    height: auto;
+	    right: -32%;
+	    position: relative;
+	}
+
+	.landing-intro, .landing-intro > .container, .landing-intro > .container > .row{
+		min-height: initial;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.book-cover-mobile{
+		right: 0;
+		width: 250px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.intro-mobile{
+		padding-bottom: 3rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	#book-download{
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.book-download div+div{
+		margin-top: 2rem;
+	}
+
+	.book-download a.btn{
+		margin-bottom: .5rem;
+	}
+}
