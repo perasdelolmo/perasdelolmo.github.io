@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     font-weight: 400;
     background: #fdfdfd;
+    color: $black;
 }
 
 h1,
@@ -59,7 +60,7 @@ a.btn{
 }
 
 h1{
-	font-size: 5rem;
+	font-size: 4rem;
 	line-height: .84;
 	letter-spacing: 0.06em;
 }
@@ -83,8 +84,8 @@ img{
 	margin-right: .5rem;
 }
 
-.col-md-7{
-	padding: 6rem 0;
+.col-lg-6{
+	padding: 2rem 15px;
 }
 
 .landing-intro{
@@ -98,7 +99,7 @@ img{
 }
 
 .book-meta{
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 500;
 	margin-top: 1rem;
 
@@ -114,14 +115,24 @@ img{
 	border-left: 6px solid $primary;
 	font-weight: 500;
 	line-height: 1.5;
-	font-size: 1.05rem;
+	font-size: 1rem;
+
+	a{
+		font-weight: 700;
+		color: $black;
+		font-family: $font-main;
+	}
 }
 
 .book-download{
 	margin-top: 2rem;
 
+	p{		
+		font-size: .875rem;
+	}
+
 	a.btn{
-		margin-bottom: .875rem;
+		margin-bottom: .5rem;
 		width: 100%;
 	}
 }
@@ -202,6 +213,10 @@ img{
 		padding-bottom: 3rem;
 		text-align: center;
 		margin-bottom: 2rem;
+
+		a.btn{			
+			min-width: 10rem;
+		}
 	}
 
 	#book-download{
@@ -215,6 +230,10 @@ img{
 
 	.book-download a.btn{
 		margin-bottom: .5rem;
+	}
+
+	.col-lg-6{
+		padding: 0 15px;
 	}
 }
 
