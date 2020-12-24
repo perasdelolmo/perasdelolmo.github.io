@@ -211,6 +211,12 @@ body.poemas-para-usar{
 	.landing-intro, .landing-intro > .container, .landing-intro > .container > .row{
 		min-height: initial;
 	}
+
+	body.poemas-para-usar{
+		.intro-mobile{
+			background: $poemas-para-usar;
+		}
+	}
 }
 
 @media screen and (max-width: 500px){
