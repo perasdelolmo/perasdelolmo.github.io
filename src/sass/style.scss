@@ -5,6 +5,7 @@
 //Variables
 $black : #080808;
 $primary: #E3704A;
+$poemas-para-usar: #0178C9;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -162,6 +163,17 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
+}
+
+body.poemas-para-usar{
+	.book-cover:before,
+	a.btn:hover{
+		background-color: $poemas-para-usar;
+	}
+
+	.book-desc{
+		border-color: $poemas-para-usar;
+	}
 }
 
 @media screen and (max-width: 768px){
