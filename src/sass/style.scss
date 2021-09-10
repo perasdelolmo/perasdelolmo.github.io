@@ -1,11 +1,10 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/aos/src/sass/aos";
-@import "node_modules/slick-carousel/slick/slick.scss";
 
 //Variables
 $black : #080808;
 $primary: #E3704A;
 $poemas-para-usar: #0178C9;
+$colores-primarios: #C5306C;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -176,6 +175,17 @@ body.poemas-para-usar{
 	}
 }
 
+body.colores-primarios{
+	.book-cover:before,
+	a.btn:hover{
+		background-color: $colores-primarios;
+	}
+
+	.book-desc{
+		border-color: $colores-primarios;
+	}
+}
+
 @media screen and (max-width: 768px){
 	.book-cover img{
 		margin: 2rem auto;
@@ -215,6 +225,12 @@ body.poemas-para-usar{
 	body.poemas-para-usar{
 		.intro-mobile{
 			background: $poemas-para-usar;
+		}
+	}
+
+	body.colores-primarios{
+		.intro-mobile{
+			background: $colores-primarios;
 		}
 	}
 }

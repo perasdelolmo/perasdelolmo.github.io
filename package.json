@@ -15,6 +15,8 @@
     "prod": "cross-env NODE_ENV=prod gulp"
   },
   "devDependencies": {
+    "popper.js": "^1.16.0",
+    "jquery": "^1.9.1",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.3",
     "cross-env": "^7.0.2",
@@ -31,8 +33,4 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
   },
-  "dependencies": {
-    "aos": "^2.3.4",
-    "slick-carousel": "^1.8.1"
-  }
 }
