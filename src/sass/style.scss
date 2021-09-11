@@ -164,7 +164,8 @@ img{
 	height: 100%;
 }
 
-body.poemas-para-usar{
+body.poemas-para-usar,
+.body.poemas-para-usar{
 	.book-cover:before,
 	a.btn:hover{
 		background-color: $poemas-para-usar;
@@ -222,7 +223,8 @@ body.colores-primarios{
 		min-height: initial;
 	}
 
-	body.poemas-para-usar{
+	body.poemas-para-usar,
+	.body.poemas-para-usar{
 		.intro-mobile{
 			background: $poemas-para-usar;
 		}
