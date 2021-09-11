@@ -15,8 +15,6 @@
     "prod": "cross-env NODE_ENV=prod gulp"
   },
   "devDependencies": {
-    "popper.js": "^1.16.0",
-    "jquery": "^1.9.1",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.3",
     "cross-env": "^7.0.2",
@@ -29,8 +27,12 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-js-import": "^1.0.6",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.16.0",
+    "sass": "^1.39.2"
   }
 }
