@@ -164,6 +164,21 @@ img{
 	height: 100%;
 }
 
+body.home{
+	.intro{
+		background: #fff;
+	    padding: 1.5rem 0;
+	    margin: 0;
+	    box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+	    position: relative;
+	    z-index: 10;
+
+		.presenta{
+			width: 240px;
+		}
+	}
+}
+
 body.poemas-para-usar,
 .body.poemas-para-usar{
 	.book-cover:before,
