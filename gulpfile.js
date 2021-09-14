@@ -84,6 +84,13 @@ function moveBooks() {
     return;
 }
 
+function moveData() {
+    return gulp.src('./*.{webmanifest}')
+    .pipe(gulp.dest('docs/'));
+
+    return;
+}
+
 function del() {
     return gulp.src('docs/*', {read: false})
         .pipe(clean());
@@ -94,4 +101,4 @@ exports.html = html;
 exports.js = js;
 exports.del = del;
 exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img, moveBooks);
+exports.default = gulp.series(del, html, css, js, img, moveBooks, moveData);
