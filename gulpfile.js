@@ -78,14 +78,14 @@ function watchFiles() {
 }
 
 function moveBooks() {
-    return gulp.src('./*.{pdf,epub,mobi}')
+    return gulp.src('src/*.{pdf,epub,mobi}')
     .pipe(gulp.dest('docs/'));
 
     return;
 }
 
 function moveData() {
-    return gulp.src('./*.{webmanifest}')
+    return gulp.src('src/*.webmanifest')
     .pipe(gulp.dest('docs/'));
 
     return;
