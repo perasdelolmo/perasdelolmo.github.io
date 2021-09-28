@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+/coloresprimarios.html              /colores-primarios
+/poemasparausar.html  /poemas-para-usar
+/modoluciernaga.html              /modo-luciernaga

@@ -85,7 +85,7 @@ function moveBooks() {
 }
 
 function moveData() {
-    return gulp.src('src/*.webmanifest')
+    return gulp.src('src/data/*')
     .pipe(gulp.dest('docs/'));
 
     return;
