@@ -4,7 +4,7 @@
 $black : #080808;
 $primary: #E3704A;
 $poemas-para-usar: #0178C9;
-$colores-primarios: #C5306C;
+$colores-primarios: #B53636;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -32,9 +32,15 @@ a{
 	color: $black;
 }
 
-a:hover{
+a:hover,
+h1 a, h1 a:hover{
 	text-decoration: none;
 	color: $black;
+	transition: .4s ease;
+}
+
+h1 a:hover{
+	opacity: .8;
 }
 
 p:last-of-type{
@@ -46,11 +52,13 @@ a.btn{
 	padding: 0px 20px;
 	height: 42px;
 	line-height: 42px;
-	color: #fff;
+	color: #f4f4f4;
 	text-align: center;
 	letter-spacing: 0.1em;
 	border-radius: 0;
+	font-size: 1.1rem;
 	transition: 0.9s cubic-bezier(0.17, 0.84, 0.44, 1);
+	text-shadow: none;
 
 	&:hover{
 		color: #fff;
@@ -68,6 +76,39 @@ h1{
 img{
 	max-width: 100%;
 	height: auto;
+}
+
+header{
+	position: absolute;
+	top: .5rem;
+	left: 0;
+	right: 0;
+	padding: 1rem 0;
+	background: #fff;
+	transition: .5s ease;
+
+	&:hover{
+		opacity: .8;
+	}
+
+	img{
+		display: block;
+		width: 50px;
+		height: auto;
+	}
+}
+
+.intro-site{
+	font-size: 1.3rem;
+	background: #333;
+	color: #fff;
+
+	img{
+		width: 250px;
+		display: block;
+		margin: 0 auto 2rem;
+		filter: invert(1);
+	}
 }
 
 .intro{
@@ -115,7 +156,7 @@ img{
 	border-left: 6px solid $primary;
 	font-weight: 500;
 	line-height: 1.5;
-	font-size: 1rem;
+	font-size: 1.1rem;
 
 	a{
 		font-weight: 700;
@@ -164,7 +205,8 @@ img{
 	height: 100%;
 }
 
-body.home{
+body.modo-luciernaga,
+.body.modo-luciernaga{
 	.intro{
 		background: #fff;
 	    padding: 1.5rem 0;
@@ -177,12 +219,17 @@ body.home{
 			width: 240px;
 		}
 	}
+
+	.intro-mobile{
+		background: $primary;
+	}
 }
 
 body.poemas-para-usar,
 .body.poemas-para-usar{
 	.book-cover:before,
-	a.btn:hover{
+	a.btn:hover,
+	.intro-mobile{
 		background-color: $poemas-para-usar;
 	}
 
@@ -191,9 +238,11 @@ body.poemas-para-usar,
 	}
 }
 
-body.colores-primarios{
+body.colores-primarios,
+.body.colores-primarios{
 	.book-cover:before,
-	a.btn:hover{
+	a.btn:hover,
+	.intro-mobile{
 		background-color: $colores-primarios;
 	}
 
@@ -216,11 +265,14 @@ body.colores-primarios{
 	}
 
 	.intro-mobile{
-		background: $primary;
 		color: #f4f4f4;
 		padding: 2rem;
 		margin-bottom: 3rem;
 		text-shadow: 1px 1px 1px rgba($black, .2);
+
+		h1 a{
+			color: #f4f4f4;
+		}
 
 	    a.btn{
 	    	margin-top: 1.5rem;
