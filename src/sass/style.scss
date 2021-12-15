@@ -5,6 +5,7 @@ $black : #080808;
 $primary: #E3704A;
 $poemas-para-usar: #0178C9;
 $colores-primarios: #B53636;
+$ojodrilos: #36B578;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -251,6 +252,19 @@ body.colores-primarios,
 	}
 }
 
+body.ojodrilos,
+.body.ojodrilos{
+	.book-cover:before,
+	a.btn:hover,
+	.intro-mobile{
+		background-color: $ojodrilos;
+	}
+
+	.book-desc{
+		border-color: $ojodrilos;
+	}
+}
+
 @media screen and (max-width: 768px){
 	.book-cover img{
 		margin: 2rem auto;
@@ -300,6 +314,12 @@ body.colores-primarios,
 	body.colores-primarios{
 		.intro-mobile{
 			background: $colores-primarios;
+		}
+	}
+
+	body.ojodrilos{
+		.intro-mobile{
+			background: $ojodrilos;
 		}
 	}
 }
