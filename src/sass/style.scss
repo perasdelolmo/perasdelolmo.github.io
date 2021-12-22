@@ -25,7 +25,10 @@ body {
 }
 
 h1,
-a{
+h2,
+a,
+button,
+label{
 	font-family: $font-title;
 }
 
@@ -48,7 +51,8 @@ p:last-of-type{
 	margin-bottom: 0;
 }
 
-a.btn{
+a.btn,
+button.btn{
 	background: $black;	
 	padding: 0px 20px;
 	height: 42px;
@@ -66,12 +70,28 @@ a.btn{
 		letter-spacing: .125em;
 		background: $primary;
 	}
+
+	&.btn--inverted{
+		background: $black;
+		color: #fff;
+
+		&:hover{
+			background: $black;
+			color: #fff;
+		}
+	}
 }
 
 h1{
 	font-size: 4rem;
 	line-height: .84;
 	letter-spacing: 0.06em;
+}
+
+h2{
+	font-size: 2.5rem;
+	line-height: .84;
+	letter-spacing: 0.06em;	
 }
 
 img{
@@ -81,35 +101,115 @@ img{
 
 header{
 	position: absolute;
-	top: .5rem;
+	top: 0;
 	left: 0;
 	right: 0;
-	padding: 1rem 0;
+	padding: .75rem 1.5rem;
 	background: #fff;
 	transition: .5s ease;
+	box-shadow: 0 2px 2px rgba(0,0,0,.05);
+	z-index: 200;
 
-	&:hover{
-		opacity: .8;
-	}
-
-	img{
+	.logo{
 		display: block;
 		width: 50px;
 		height: auto;
 	}
+
+	ul{
+		list-style: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+		font-size: 1.3rem;
+		justify-content: end;
+	}
+
+	a{
+		text-decoration: none;
+		letter-spacing: 0.1em;		
+		transition: 0.9s cubic-bezier(0.17, 0.84, 0.44, 1);
+		line-height: 1;
+
+		&:hover{
+			letter-spacing: .125em;
+		}
+	}
+
+	li+li{
+		margin-left: 2rem;
+	}
+
+	.social img{
+		width: 24px;
+		height: 24px;
+		transition: 0.9s cubic-bezier(0.17, 0.84, 0.44, 1);
+
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}
+
+body.page header,
+body.home header{
+	box-shadow: none;
+	background: none;
 }
 
 .intro-site{
 	font-size: 1.3rem;
-	background: #333;
-	color: #fff;
+	position: relative;
 
-	img{
-		width: 250px;
-		display: block;
-		margin: 0 auto 2rem;
-		filter: invert(1);
+	em{
+		font-size: 1.5em;
+		font-weight: 700;
 	}
+
+	.col-content{
+		padding-bottom: 3rem;
+		padding-top: 3rem;
+	}
+
+/* 	&:before{
+		background: #eee;
+		content: "";
+		position: absolute;
+		left: 1.5rem;
+		top: 0;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		z-index: -1;
+	}  */
+
+/* 	.btn{
+		display: block;
+		max-width: 15rem;
+		margin: 2rem auto 0;
+		background: #fff;
+		color: $black;
+		font-size: 1.2rem;
+
+		&:hover{
+			color: $black;
+			background: rgba(255,255,255,.8);
+		}
+	} */
+
+	.go-to-books{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 1.5rem;
+		width: 16px;
+		transition: 0.9s cubic-bezier(0.17, 0.84, 0.44, 1);
+
+		&:hover{
+			transform: translateY(4px);
+		}
+	}
+
 }
 
 .intro{
@@ -140,7 +240,8 @@ header{
 	min-height: 100vh;
 }
 
-.book-meta{
+.book-meta,
+.section-intro{
 	font-size: 1.25rem;
 	font-weight: 500;
 	margin-top: 1rem;
@@ -262,6 +363,47 @@ body.ojodrilos,
 
 	.book-desc{
 		border-color: $ojodrilos;
+	}
+}
+
+form{
+	margin: 2rem 0 0;
+	max-width: 600px;
+
+	label{
+		font-size: 1.5rem;
+		margin-bottom: .25rem;
+		letter-spacing: 0.1em;
+		display: none;
+	}
+
+	.form-control{
+		border-radius: 0;
+		height: 48px;
+		transition: all .4s ease;
+	}
+
+	.form-control:focus {
+	    border-color: rgba(0,0,0,.25);
+	    outline: 0;
+	    box-shadow: none;
+
+	}
+
+	textarea.form-control{
+		height: 7rem;
+	}
+
+	.form-group+.form-group{
+		margin-top: 1.5rem;
+	}
+}
+
+.page-section{
+	padding: 3rem 0;
+
+	&__intro{
+		padding-top: 8rem;
 	}
 }
 
