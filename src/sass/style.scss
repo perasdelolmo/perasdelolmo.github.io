@@ -151,7 +151,7 @@ header{
 	}
 }
 
-body.page header,
+body.contacto header,
 body.home header{
 	box-shadow: none;
 	background: none;
@@ -230,8 +230,14 @@ body.home header{
 	padding: 2rem 15px;
 }
 
+body.contacto .landing-intro,
+body.home .landing-intro{
+	margin-top: 0;
+}
+
 .landing-intro{
 	overflow-x: hidden;
+	margin-top: 74px;
 }
 
 .landing-intro,
@@ -309,18 +315,6 @@ body.home header{
 
 body.modo-luciernaga,
 .body.modo-luciernaga{
-	.intro{
-		background: #fff;
-	    padding: 1.5rem 0;
-	    margin: 0;
-	    box-shadow: 0 0 4px rgb(0 0 0 / 15%);
-	    position: relative;
-	    z-index: 10;
-
-		.presenta{
-			width: 240px;
-		}
-	}
 
 	.intro-mobile{
 		background: $primary;
