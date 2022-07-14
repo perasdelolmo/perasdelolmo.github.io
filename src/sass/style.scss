@@ -472,6 +472,12 @@ form{
 			background: $ojodrilos;
 		}
 	}
+
+	body.el-amor{
+		.intro-mobile{
+			background: $el-amor;
+		}
+	}
 }
 
 @media screen and (max-width: 500px){
