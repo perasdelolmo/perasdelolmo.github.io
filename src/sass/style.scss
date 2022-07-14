@@ -6,6 +6,7 @@ $primary: #E3704A;
 $poemas-para-usar: #0178C9;
 $colores-primarios: #B53636;
 $ojodrilos: #36B578;
+$el-amor: #B59136;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -357,6 +358,19 @@ body.ojodrilos,
 
 	.book-desc{
 		border-color: $ojodrilos;
+	}
+}
+
+body.el-amor,
+.body.el-amor{
+	.book-cover:before,
+	a.btn:hover,
+	.intro-mobile{
+		background-color: $el-amor;
+	}
+
+	.book-desc{
+		border-color: $el-amor;
 	}
 }
 
