@@ -7,6 +7,7 @@ $poemas-para-usar: #0178C9;
 $colores-primarios: #B53636;
 $ojodrilos: #36B578;
 $el-amor: #B59136;
+$cono: #F34F34;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -156,6 +157,19 @@ body.contacto header,
 body.home header{
 	box-shadow: none;
 	background: none;
+}
+
+#cafecito-btn-fixed{
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 10;
+	transition: .2s ease-in-out;
+
+	&:hover{
+		opacity: .9;
+		transform: scale(1.02);
+	}
 }
 
 .intro-site{
@@ -374,6 +388,19 @@ body.el-amor,
 	}
 }
 
+body.cono,
+.body.cono{
+	.book-cover:before,
+	a.btn:hover,
+	.intro-mobile{
+		background-color: $cono;
+	}
+
+	.book-desc{
+		border-color: $cono;
+	}
+}
+
 form{
 	margin: 2rem 0 0;
 	max-width: 600px;
@@ -476,6 +503,12 @@ form{
 	body.el-amor{
 		.intro-mobile{
 			background: $el-amor;
+		}
+	}
+
+	body.cono{
+		.intro-mobile{
+			background: $cono;
 		}
 	}
 }
