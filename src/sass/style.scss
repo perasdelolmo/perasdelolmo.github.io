@@ -8,6 +8,7 @@ $colores-primarios: #B53636;
 $ojodrilos: #36B578;
 $el-amor: #B59136;
 $cono: #F34F34;
+$cualquiera: #7536B5;
 
 $font-main: "Alegreya", sans-serif;
 $font-title: "Passion One", serif;
@@ -403,6 +404,19 @@ body.cono,
 	}
 }
 
+body.cualquiera,
+.body.cualquiera{
+	.book-cover:before,
+	a.btn:hover,
+	.intro-mobile{
+		background-color: $cualquiera;
+	}
+
+	.book-desc{
+		border-color: $cualquiera;
+	}
+}
+
 form{
 	margin: 2rem 0 0;
 	max-width: 600px;
@@ -511,6 +525,13 @@ form{
 	body.cono{
 		.intro-mobile{
 			background: $cono;
+		}
+	}
+
+
+	body.cualquiera{
+		.intro-mobile{
+			background: $cualquiera;
 		}
 	}
 }
